@@ -58,6 +58,22 @@ main {
     height: 200px;
 }
 
+.main__img img:hover {
+    animation: girar 0.4s;
+}
+
+@keyframes girar {
+  0%  {transform: rotate(0deg)}
+  20% {transform: rotate(45deg)}
+  30% {transform: rotate(0deg)}
+  50% {transform: rotate(-45deg)}
+  60% {transform: rotate(0deg)}
+  70% {transform: rotate(15deg)}
+  80% {transform: rotate(0deg)}
+  90% {transform: rotate(-15deg)}
+  100% {transform: rotate(0deg)}
+}
+
 .main__title {
     display: flex;
     justify-content: center;
@@ -84,6 +100,8 @@ main {
     width: 120px;
     background-color: var(--primary-color);
     border-radius: 8px;
+    box-shadow:  5px 5px 10px #929292;
+    transition: 300ms all;
     text-decoration: none;
 
     font-family: 'Roboto', sans-serif;
@@ -91,4 +109,9 @@ main {
     font-weight: bold;
     line-height: 3.3rem;
     color: var(--black);
+}
+
+.main__button--button:hover {
+    background-color: var(--black);
+    color: var(--backround-color);
 }
